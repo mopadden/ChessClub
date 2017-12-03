@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Current__c</fullName>
+        <externalId>false</externalId>
+        <formula>AND(OR (Start_Date__c &lt;= TODAY(), ISNULL(Start_Date__c )), Next_Start_Date__c &gt; TODAY() )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Exempt_Gender__c</fullName>
+        <defaultValue>&quot;Female&quot;</defaultValue>
+        <description>Select which gender to charge membership fee</description>
+        <externalId>false</externalId>
+        <label>Exempt Gender</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Gender</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Maximum_Subscription_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Maximum Subscription Fee</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Membership_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Membership Fee</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Next_Start_Date__c</fullName>
+        <defaultValue>DATE(YEAR(TODAY())+1,9,1)</defaultValue>
+        <externalId>false</externalId>
+        <label>Next Start Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Next_Starting_Date__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Next Starting Date</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Year__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Previous Year</label>
+        <referenceTo>Year__c</referenceTo>
+        <relationshipLabel>Previous Years</relationshipLabel>
+        <relationshipName>Subscription_Years</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Second_Semester_Days__c</fullName>
+        <defaultValue>7*(52-17)</defaultValue>
+        <externalId>false</externalId>
+        <label>Second Semester Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Second_Semester_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Next_Start_Date__c -  Second_Semester_Days__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Second Semester Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Previous_Year__r.Next_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Starting_Date__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Starting Date</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Subscription Year</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Previous_Year__c</columns>
+        <columns>Start_Date__c</columns>
+        <columns>Next_Start_Date__c</columns>
+        <columns>Current__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Year</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Subscription Years</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>StartDateAfterNextStartDate</fullName>
+        <active>true</active>
+        <errorConditionFormula>Start_Date__c &gt;  Next_Start_Date__c</errorConditionFormula>
+        <errorMessage>This start date is after the next start date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>StartDateAfterSecondSemesterStartDate</fullName>
+        <active>true</active>
+        <errorConditionFormula>Start_Date__c &gt;= Second_Semester_Start_Date__c</errorConditionFormula>
+        <errorMessage>Start date is after second semester start date</errorMessage>
+    </validationRules>
+</CustomObject>

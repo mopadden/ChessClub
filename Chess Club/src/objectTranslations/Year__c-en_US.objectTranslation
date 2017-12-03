@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Subscription Year</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Subscription Years</value>
+    </caseValues>
+    <fields>
+        <label><!-- Current --></label>
+        <name>Current__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exempt Gender --></label>
+        <name>Exempt_Gender__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maximum Subscription Fee --></label>
+        <name>Maximum_Subscription_Fee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Membership Fee --></label>
+        <name>Membership_Fee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Start Date --></label>
+        <name>Next_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Starting Date --></label>
+        <name>Next_Starting_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Year --></label>
+        <name>Previous_Year__c</name>
+        <relationshipLabel><!-- Previous Years --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Second Semester Days --></label>
+        <name>Second_Semester_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Second Semester Start Date --></label>
+        <name>Second_Semester_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Starting Date --></label>
+        <name>Starting_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Subscription Year Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- This start date is after the next start date --></errorMessage>
+        <name>StartDateAfterNextStartDate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Start date is after second semester start date --></errorMessage>
+        <name>StartDateAfterSecondSemesterStartDate</name>
+    </validationRules>
+</CustomObjectTranslation>

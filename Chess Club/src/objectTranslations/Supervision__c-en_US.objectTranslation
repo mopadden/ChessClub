@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Supervisor Booking</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Supervisor Bookings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Meeting Supervisor --></label>
+        <name>Meeting_Supervisor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meeting --></label>
+        <name>Meeting__c</name>
+        <relationshipLabel><!-- Supervisor Bookings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Supervisor Name --></label>
+        <name>Supervisor_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supervisor Registration --></label>
+        <name>Supervisor__c</name>
+        <relationshipLabel><!-- Supervisor Bookings --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

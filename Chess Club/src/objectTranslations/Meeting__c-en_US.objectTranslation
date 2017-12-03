@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Meeting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Meetings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Competition --></label>
+        <name>Competition__c</name>
+    </fields>
+    <fields>
+        <label><!-- Losses --></label>
+        <name>Losses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meeting Date --></label>
+        <name>Meeting_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Planning --></label>
+        <name>Planning__c</name>
+    </fields>
+    <fields>
+        <label><!-- Players --></label>
+        <name>Players__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supervisors --></label>
+        <name>Supervisors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Venue --></label>
+        <name>Venue__c</name>
+        <relationshipLabel><!-- Meetings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Wins --></label>
+        <name>Wins__c</name>
+    </fields>
+    <layouts>
+        <layout>Meeting Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Meeting --></label>
+        <name>Meeting</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Supervisors not needed for committee meeting --></errorMessage>
+        <name>CommiteeMeetingSupervision</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Games should be held at competition meetings --></errorMessage>
+        <name>NonCompetitionGames</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Players should not attend planning meetings. --></errorMessage>
+        <name>Players_Planning</name>
+    </validationRules>
+</CustomObjectTranslation>

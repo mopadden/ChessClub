@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Attendance</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Attendances</value>
+    </caseValues>
+    <fields>
+        <label><!-- Games --></label>
+        <name>Games__c</name>
+    </fields>
+    <fields>
+        <label><!-- Losses --></label>
+        <name>Losses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meeting Player --></label>
+        <name>Meeting_Player__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meeting --></label>
+        <name>Meeting__c</name>
+        <relationshipLabel><!-- Attendances --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Player --></label>
+        <name>Player__c</name>
+        <relationshipLabel><!-- Attendances --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Wins --></label>
+        <name>Wins__c</name>
+    </fields>
+    <layouts>
+        <layout>Attendance Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,28 @@
+<apex:page standardController="Person__c" showheader="False">
+    <apex:pagemessages ></apex:pagemessages>
+    <apex:stylesheet value="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"/>
+      <apex:includescript value="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" />
+      <apex:includeScript value="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"/>
+
+<div vertical-align="center">
+      <apex:form >
+<apex:pageBlock >
+<div align="Center">
+<apex:outputtext value="PLEASE ENTER YOUR DETAILS" style="font-size:26px; color:red; "/><BR/>
+    </div>
+        <apex:pageBlockSection showHeader="true" title="Personal Details" columns="1">
+            <apex:inputField value="{!Person__c.First_Name__c}" style="width:300px;height:20px;" Required="False"/>
+            <apex:inputField value="{!Person__c.Last_Name__c}" style="width:300px;height:20px;" Required="True"/>
+        </apex:pageBlockSection>
+      <div align="center">
+        
+        
+        <apex:commandbutton value="        SUBMIT    "  action="{!save}" />
+    </div>     
+        </apex:pageBlock>
+    </apex:form>
+    <div align="center">
+    <apex:image value="{!$Resource.GPG_IU}"/>
+    </div>
+    </div>
+    </apex:page>

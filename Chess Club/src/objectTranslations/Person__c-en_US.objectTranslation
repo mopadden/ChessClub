@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Person</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>People</value>
+    </caseValues>
+    <fields>
+        <label><!-- Age --></label>
+        <name>Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Details --></label>
+        <name>Contact_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Birth --></label>
+        <name>Date_Of_Birth__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Name --></label>
+        <name>Full_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Player Registrations --></label>
+        <name>Player_Registrations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Player --></label>
+        <name>Player__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Date --></label>
+        <name>Record_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Subscription_Expiry__c &gt; TODAY() --></help>
+        <label><!-- Subscribed --></label>
+        <name>Subscribed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supervisor Registrations --></label>
+        <name>Supervisor_Registrations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supervisor --></label>
+        <name>Supervisor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Under-Age --></label>
+        <name>Underage__c</name>
+    </fields>
+    <layouts>
+        <layout>Person Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Person --></label>
+        <name>Person</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- This person is already registered as a player --></errorMessage>
+        <name>Multiple_Player_Registrations</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This person is already registered as a supervisor --></errorMessage>
+        <name>Multiple_Supervisor_Registrations</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Under-age player should not  have contact details --></errorMessage>
+        <name>Underage_Contacts</name>
+    </validationRules>
+</CustomObjectTranslation>

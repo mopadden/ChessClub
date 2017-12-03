@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Player Registration</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Player Registrations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Current --></label>
+        <name>Current__c</name>
+    </fields>
+    <fields>
+        <label><!-- DOB --></label>
+        <name>DOB__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Name --></label>
+        <name>Full_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>Gender__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive --></label>
+        <name>Inactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Membership Expiry Date --></label>
+        <name>Membership_Expiry_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Person --></label>
+        <name>Person_ID_del__c</name>
+        <relationshipLabel><!-- Player Registrations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Under-Age --></label>
+        <name>Under_Age__c</name>
+    </fields>
+    <layouts>
+        <layout>Player Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Under-age players should be listed as under-age, not as contact --></errorMessage>
+        <name>Contact_Under_Age</name>
+    </validationRules>
+</CustomObjectTranslation>
